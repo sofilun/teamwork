@@ -1,0 +1,31 @@
+body {
+    font-family: Bookman Old Style;
+}
+
+#header {
+    text-shadow: 1px 1px 1px #000;
+}
+
+#timer {
+    text-shadow: 1px 1px 1px #000;
+}
+#bt {
+    align-items: center;
+    background-color: #DDA0DD;
+    border-radius: 5px;  
+    height: 35px;
+}
+
+#q1, #q2, #q3, #q4, #q5, #q6, #q6, #q7, #q8 {
+    margin-bottom: 20px;
+}
+
+table {
+    text-align: center;
+}
+
+#bt:disabled {
+    font-family: Bookman Old Style;
+    background-color: #CD5C5C;
+    color: black;
+}
