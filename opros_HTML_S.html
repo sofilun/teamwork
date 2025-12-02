@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <title>Опросник</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="#">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/index.js" defer></script>
+    </head>
+    <body>
+        <div id="header" align="center">
+            <h1><font color="DDA0DD">Лабораторная работа 4</font></h1>
+            <h2><font color="DDA0DD">Вариант 19</font></h2>
+        </div>        
+        <div id="if" align="center">
+            <p><font size="4">Предмет «Изобразительное искусство». Тестирование 
+                по теме «Искусство книги».</font></p>
+        </div>
+        <div id="timer" align="center">
+            <p><font size="6" color="DDA0DD">Осталось времени: 5:00</font></p>
+        </div>
+        <form>
+            <div id="q1">
+                <label>1. Что такое обложка книги?</label><br>
+                <label for="sheet">
+                    <input type="radio" id="sheet" name="question1" value="sheet">Лист с названием книги<br>
+                </label>
+                <label for="part">
+                    <input type="radio" id="part" name="question1" value="part">Твёрдая или мягкая внешняя часть книги<br>
+                </label>
+                <label for="pictures">
+                    <input type="radio" id="pictures" name="question1" value="pictures">Картинки внутри книги<br>
+                </label>
+            </div>
+            <div id="q2">
+                <label>2. Кто рисует картинки в книгах?</label><br>
+                <label for="writer">
+                    <input type="radio" id="writer" name="question2" value="writer">Писатель<br>
+                </label>
+                <label for="artist">
+                    <input type="radio" id="artist" name="question2" value="artist">Художник-иллюстратор<br>
+                </label>
+                <label for="librarian">
+                    <input type="radio" id="librarian" name="question2" value="librarian">Библиотекарь<br>
+                </label>
+            </div>
+            <div id="q3">
+                <label>3. Какие бывают виды книг?</label><br>
+                <label for="fairy-tales">
+                    <input type="checkbox" id="fairy-tales" name="question3" value="a">Сказки<br>
+                </label>
+                <label for="encyclopedia">
+                    <input type="checkbox" id="encyclopedia" name="question3" value="b">Энциклопедии<br>
+                </label>
+                <label for="balls">
+                    <input type="checkbox" id="balls" name="question3" value="c">Воздушные шары<br>
+                </label>
+                <label for="poems">
+                    <input type="checkbox" id="poems" name="question3" value="d">Стихи<br>
+                </label>
+            </div>
+            <div id="q4">
+                <label>4. Из чего делают книги? </label><br>
+                <label for="paper">
+                    <input type="checkbox" id="paper" name="question4" value="a">Бумага<br>
+                </label>
+                <label for="glass">
+                    <input type="checkbox" id="glass" name="question4" value="b">Стекло<br>
+                </label>
+                <label for="cardboard">
+                    <input type="checkbox" id="cardboard" name="question4" value="c">Картон<br>
+                </label>
+                <label for="metal">
+                    <input type="checkbox" id="metal" name="question4" value="d">Металл<br>
+                </label>
+            </div>
+            <div id="q5">
+                <label for="role-1" id="label-role-1">5. Как называется человек, который пишет книги?</label><br>
+                <select name="question5" id="role-1">
+                    <option value="" selected disabled>Нет ответа</option>
+                    <option value="teacher">Учитель</option>
+                    <option value="writer">Писатель</option>
+                    <option value="doctor">Врач</option>
+                    <option value="cook">Повар</option>
+                </select>
+            </div>
+            <div id="q6">
+                <label for="role-2" id="label-role-2">6. Как называется картинка перед началом книги?</label><br>
+                <select name="question6" id="role-2">
+                    <option value="" selected disabled>Нет ответа</option>
+                    <option value="frontispiece">Фронтиспис</option>
+                    <option value="table-of-contents">Оглавление</option>
+                    <option value="title-page">Титульный лист</option>
+                    <option value="page">Страница</option>
+                </select>
+            </div>
+            <div id="q7">
+                <label for="question-1" id="label-question-1">7. Как называется место, где хранят много книг?</label><br>
+                <input type="text" name="question7" id="question-1" placeholder="Введите ответ"/>
+            </div>
+            <div id="q8">
+                <label for="question-2" id="label-question-2">8. Кто написал "Войну и мир"?</label><br>
+                <input type="text" name="question8" id="question-2" placeholder="Введите ответ"/>
+            </div>
+            <div id="q9">
+                <label>9. Что находится в самом конце книги и помогает найти нужную страницу?</label><br>
+                <label for="alphabet">
+                    <input type="radio" id="alphabet" name="question9" value="alphabet">Алфавит<br>
+                </label>
+                <label for="contents">
+                    <input type="radio" id="contents" name="question9" value="contents">Содержание<br>
+                </label>
+                <label for="page">
+                    <input type="radio" id="page" name="question9" value="page">Страница<br>
+                </label>
+            </div>
+            <div id="q10">
+                <label>10. Какие из этих элементов помогают сделать книгу красивой и интересной?</label><br>
+                <label for="cover-design">
+                    <input type="checkbox" id="cover-design" name="question10" value="a">Красочная обложка с рисунком<br>
+                </label>
+                <label for="interesting-font">
+                    <input type="checkbox" id="interesting-font" name="question10" value="b">Красивый шрифт букв<br>
+                </label>
+                <label for="page-numbers">
+                    <input type="checkbox" id="page-numbers" name="question10" value="c">Номера страниц в углу<br>
+                </label>
+                <label for="decorations">
+                    <input type="checkbox" id="decorations" name="question10" value="d">Узорные рамки вокруг текста<br>
+                </label>
+            </div>
+        </form>
+        <button id="bt">Завершить тест</button>   
+        <table id="table">
+            <thead>
+                <tr>
+                    <td ></td>                   
+                </tr>
+            </thead>
+            <tbody id="tablebody"></tbody>
+        </table>
+    </body>
+</html>
