@@ -6,7 +6,9 @@ const Answers={
     question5: "writer",
     question6: "frontispiece",
     question7: "библиотека",
-    question8: "лев николаевич толстой"
+    question8: "лев николаевич толстой",
+    question9: "contents",
+    question10: ["a","b","d"]
 };
 
 let timerInterval;
@@ -120,7 +122,9 @@ function table () {
         question5: document.getElementById('role-1').value || 'нет ответа',
         question6: document.getElementById('role-2').value || 'нет ответа',
         question7: document.getElementById('question-1').value.toLowerCase() || 'нет ответа',
-        question8: document.getElementById('question-2').value.toLowerCase() || 'нет ответа'
+        question8: document.getElementById('question-2').value.toLowerCase() || 'нет ответа',
+        question9: document.querySelector('input[name="question9"]:checked')?.value || 'нет ответа',
+        question10: Array.from(document.querySelectorAll('input[name="question10"]:checked')).map(el => el.value) || ['нет ответа']
     };   
     const questions = [
         {
@@ -196,6 +200,27 @@ function table () {
             correct: "Лев Николаевич Толстой",
             user: userAnswers.question8 === 'нет ответа' ? "нет ответа" : userAnswers.question8,
             isCorrect: userAnswers.question8.includes('лев николаевич толстой')
+        },
+        {
+            text: "Что находится в самом конце книги и помогает найти нужную страницу?",
+            correct: "Содержание",
+            user: userAnswers.question9 === 'contents' ? "Содержание" :
+                  userAnswers.question9 === 'alphabet' ? "Алфавит" :
+                  userAnswers.question9 === 'page' ? "Страница" :
+                  userAnswers.question9 === 'нет ответа' ? "нет ответа" : userAnswers.question9,
+            isCorrect: userAnswers.question9 === Answers.question9
+        },
+        {
+            text: "Какие из этих элементов помогают сделать книгу красивой и интересной?",
+            correct: "Красочная обложка с рисунком, Красивый шрифт букв, Узорные рамки вокруг текста",
+            user: userAnswers.question10[0] === 'нет ответа' ? "нет ответа" : 
+                userAnswers.question10.map(a => 
+                a === 'a' ? "Красочная обложка с рисунком" :
+                a === 'b' ? "Красивый шрифт букв" :
+                a === 'c' ? "Номера страниц в углу" :
+                a === 'd' ? "Узорные рамки вокруг текста" : a
+            ).join(', ') || 'нет ответа',
+            isCorrect: arraysEqual(userAnswers.question10.sort(), Answers.question10.sort())
         }
     ];
     const tableBody = document.getElementById('tablebody');
